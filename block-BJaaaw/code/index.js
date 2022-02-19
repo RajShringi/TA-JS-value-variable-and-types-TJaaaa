@@ -84,7 +84,7 @@ switch (true) {
     alert(`Your salery is: ${salery - (20 * salery) / 100}`);
     break;
   case salery <= 50000:
-    alert(`Your salery is: ${salery - (20 * salery) / 100}`);
+    alert(`Your salery is: ${salery - (30 * salery) / 100}`);
     break;
   default:
     alert(`can't calculate`);
