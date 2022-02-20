@@ -36,7 +36,9 @@ for (let j = 0; j <= 10; j++) {
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 for (let j = 9; j >= 1; j--) {
-  console.log(j);
+  if (j % 2 !== 0) {
+    console.log(j);
+  }
 }
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
@@ -77,10 +79,8 @@ Example:
 let num1 = Number(prompt("Enter num1"));
 let num2 = Number(prompt("Enter num2"));
 
-if (num1 === num2) {
-  alert(true);
-} else if (num1 !== num2) {
-  alert(false);
-} else {
+if (isNaN(num1) || isNaN(num2)) {
   alert(`Enter a valid value`);
+} else {
+  alert(num1 === num2);
 }
