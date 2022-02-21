@@ -14,5 +14,22 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-
+let spendingAmount = bank_balance;
+while (spendingAmount > 0) {
+  let perPhonespending = 0;
+  perPhonespending += PHONE_PRICE;
+  amount += perPhonespending;
+  if (amount < SPENDING_THRESHOLD) {
+    perPhonespending += ACCESSORY_PRICE;
+    amount += ACCESSORY_PRICE;
+  }
+  spendingAmount -= perPhonespending;
+}
+amount = (amount + amount * 0.08).toFixed(2);
+alert(`$${amount}`);
+if (amount > bank_balance) {
+  alert(`you can't afford`);
+} else {
+  alert(`you can afford`);
+}
 // ⛑ Answer of the above will `$334.76`.
