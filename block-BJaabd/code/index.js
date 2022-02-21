@@ -185,10 +185,23 @@ if (num1 * num2 * num3 > 0) {
 // [Your code goes here]
 let firstNumber = +prompt("Enter first number");
 let secondNumber = +prompt("Enter second number");
+let operation = prompt("enter operation (Add, Sub, Mul, Div)");
 let max = firstNumber > secondNumber ? firstNumber : secondNumber;
 let min = firstNumber < secondNumber ? firstNumber : secondNumber;
 
-alert(`sum is: ${max + min}`);
-alert(`subtraction is: ${max - min}`);
-alert(`multiplication is: ${max * min}`);
-alert(`division is: ${max / min}`);
+switch (operation) {
+  case "Add":
+    alert(`sum is: ${max + min}`);
+    break;
+  case "Sub":
+    alert(`subtraction is: ${max - min}`);
+    break;
+  case "Mul":
+    alert(`multiplication is: ${max * min}`);
+    break;
+  case "Div":
+    alert(`division is: ${max / min}`);
+    break;
+  default:
+    alert("Enter valid input");
+}
